@@ -1,5 +1,7 @@
+"use-client";
 import Link from "next/link";
 import { Spotlight } from "./ui/Spotlight";
+import { HoverBorderGradient } from "./ui/hover-border-gradient";
 
 function HeroSection() {
     return (
@@ -21,7 +23,15 @@ function HeroSection() {
                     through engaging courses, expert guidance, and a supportive community.
                 </p>
                 <div className="mt-5">
-                    <Link href={"/courses"}>Explore Courses</Link>
+                    <Link href={"/courses"}>
+                        <HoverBorderGradient
+                            containerClassName="rounded-full"
+                            as="button"
+                            className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
+                        >
+                            <span>Aceternity UI</span>
+                        </HoverBorderGradient>
+                    </Link>
                 </div>
             </div>
         </div>
